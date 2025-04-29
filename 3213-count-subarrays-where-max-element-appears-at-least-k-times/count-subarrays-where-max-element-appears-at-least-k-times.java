@@ -11,7 +11,7 @@ class Solution {
             }
 
             while (count >= k) {
-                res += (n - right); // all subarrays from left to end
+                res += (n - right); 
                 if (nums[left] == max) {
                     count--;
                 }
