@@ -15,7 +15,7 @@ Set<Integer> set=new TreeSet<Integer>();
 			nums[j++]=k;
 			
 		}
-        //System.out.println(set);
+        
 		int n=nums.length;
         return set.size();
 		
