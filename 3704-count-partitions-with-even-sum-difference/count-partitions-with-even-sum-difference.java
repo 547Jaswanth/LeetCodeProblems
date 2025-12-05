@@ -11,7 +11,7 @@ class Solution {
 			left+=nums[i];
 			right=total-left;
 			
-			if((left%2==0) ==(right%2==0))
+			if((left%2) ==(right%2))
 			{
 				count++;
 			}
