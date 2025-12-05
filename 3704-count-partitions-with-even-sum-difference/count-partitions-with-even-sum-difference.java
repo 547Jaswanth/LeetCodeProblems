@@ -3,10 +3,7 @@ class Solution {
         	
 		int count=0;
 		int total=0;
-        for(int i:nums)
-        {
-            total+=i;
-        }
+        for(int i:nums) total+=i;
 		int left=0;
 		int right=0;
 		for(int i=0;i<nums.length-1;i++)
@@ -14,7 +11,7 @@ class Solution {
 			left+=nums[i];
 			right=total-left;
 			
-			if((left-right)%2==0)
+			if((left%2==0) ==(right%2==0))
 			{
 				count++;
 			}
