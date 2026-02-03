@@ -1,19 +1,23 @@
 class Solution {
     public String removeDigit(String number, char digit) {
 
-        String max ="";
-        for(int i=0;i<number.length();i++)
-        {
-            if(number.charAt(i)==digit)
-            {
-                String temp = number.substring(0,i) + number.substring(i+1);
+        int removeIndex=-1;
 
-                if(max.equals("") || temp.compareTo(max)>0)
-                {
-                    max=temp;
-                }
+        // First digit accurence remove
+        for(int i=0;i<number.length()-1;i++)
+        {
+            if(number.charAt(i)==digit && number.charAt(i+1)>digit)
+            {
+                removeIndex = i;
+                break;
             }
         }
-        return String.valueOf(max);
+
+        if(removeIndex==-1)
+        {
+            removeIndex = number.lastIndexOf(digit);
+        }
+
+        return number.substring(0,removeIndex)+number.substring(removeIndex+1);
     }
 }
