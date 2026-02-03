@@ -6,7 +6,7 @@ class Solution {
         {
             if(number.charAt(i)==digit)
             {
-                String temp = number.substring(0,i) + number.substring(i+1,number.length());
+                String temp = number.substring(0,i) + number.substring(i+1);
 
                 if(max.equals("") || temp.compareTo(max)>0)
                 {
